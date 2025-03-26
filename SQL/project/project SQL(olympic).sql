@@ -146,11 +146,12 @@ TOP PERFORMANCE IN 2024:
 Total Countries Winning Medals:
      A total of 217 countries have won at least one Olympic medal.
 Medal Growth Over the Years:
- -> In 1896, only 122 medals were awarded.
- -> In 2024, over 1,044 medals were given.
--> More sports and countries joined, making the event bigger.
-->The biggest jump in medals happened after 1984 due to more participation.
-
+    -> In 1896, only 122 medals were awarded.
+    -> In 2024, over 1,044 medals were given.
+    -> More sports and countries joined, making the event bigger.
+    ->The biggest jump in medals happened after 1984 due to more participation.
+Biggest Medal Win in One Olympics:
+ USA (1904 Olympics) won 234 medals, the highest ever in a single event.
 
 
 
