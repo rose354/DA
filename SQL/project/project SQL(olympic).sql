@@ -137,12 +137,19 @@ USE olympic;
 
 INSIGHTS:
 TOP PERFORMANCE IN 2024:
- -> The united states ranked first with 126 total medals.
-gold=40,silver=44,bronze=42
- -> China had the same number of Gold medals (40)
- but ranked second due to fewer total medals (91).                       
+  -> The united states ranked first with 126 total medals.
+    gold=40,silver=44,bronze=42
+  -> China had the same number of Gold medals (40)
+     but ranked second due to fewer total medals (91).                       
   -> France, the host of the 2024 Olympics, ranked 5th with 64 medals.
-  -> Japan (3rd) and Australia (4th) also performed well, winning a good number of medals.
+  -> Japan (3rd) and Australia (4th) also performed well, winning a good number of medals.    
+Total Countries Winning Medals:
+     A total of 217 countries have won at least one Olympic medal.
+Medal Growth Over the Years:
+ -> In 1896, only 122 medals were awarded.
+ -> In 2024, over 1,044 medals were given.
+-> More sports and countries joined, making the event bigger.
+->The biggest jump in medals happened after 1984 due to more participation.
 
 
 
