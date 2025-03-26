@@ -1,0 +1,345 @@
+1) What is Power BI and how does it differ from Excel?
+ --->   Power BI: A Business Intelligence (BI) tool for interactive dashboards and data visualization.
+       Excel: A spreadsheet tool for calculations and data analysis
+ Power BI:	                          
+Purpose	       -   Data visualization & B               
+Speed	       -   Handles large data efficiently     	  
+Visualization  -   Advanced, interactive dashboards	  
+Automation     -   Auto data refresh	                  
+Collaboration  -   Cloud-based sharing                     
+
+ Excel:
+ Purpose	-     Data analysis & spreadsheets
+Speed	        -     Slower with big datasets
+Visualization	-     Basic charts, pivot tables
+Automation	-     Needs VBA/macros
+Collaboration   -     File-based sharing 
+
+
+2) Explain the concept of data modeling in Power BI.
+ 
+    ---> Data modeling is the process of organizing and structuring data 
+from multiple sources to create relationships and improve data analysis.
+ like:
+  * Tables & Relationships – Connect tables using keys.
+  * Data Types – Define correct formats (text, number, date).
+  * DAX Formulas – Create custom calculations.
+  * Schemas (Star/Snowflake) – Optimize performance.
+Benefits:
+ > Accurate insights 
+ > Better performance 
+ > Simplified analysis
+
+3) What are the different types of connections available in Power BI?
+
+  --> TYPES OF CONNECTIONS 
+
+ Import Mode                     ->          Loads data into Power BI for fast performance; requires scheduled refreshes.
+Direct Query                     ->          Queries data directly from the source in real-time; no data is stored in Power BI.
+Live Connection                  ->          Similar to Direct Query but mainly for OLAP models (e.g., SSAS); high performance.
+Composite Mode                   ->          Hybrid of Import & Direct Query; balances performance and real-time needs.
+Data verse & Power Platform      ->          Connects to Microsoft services like Dynamics 365, PowerApps.
+Streaming Datasets               ->          For real-time data from IoT, logs; displays live but not stored long-term.
+ODBC & Custom Connectors         ->          Connects via ODBC drivers or custom-built connectors.
+
+4) How do you handle data transformation in Power BI? 
+
+* Clean Data – Remove duplicates, filter rows, replace nulls, trim text.
+* Reshape Data – Split/merge columns, pivot/unpivot tables.
+* Transform Data – Change data types, create custom columns, group/aggregate data.
+* Combine Data – Merge (joins) and append (stack) queries.
+* Optimize Performance – Remove unnecessary columns/rows before loading.
+* Use M Language – Write advanced custom transformations.
+
+After transformation, data is loaded into Power BI’s Data Model for further analysis using DAX.
+
+5) What is DAX (Data Analysis Expressions) and why is it important in
+Power BI? 
+
+--> DAX (Data Analysis Expressions) is a formula language in Power BI used for
+ custom calculations in measures, columns, and tables.
+
+ DAX Important?
+* Performs advanced calculations 📊
+* Enhances data analysis with KPIs 📈
+* Optimizes performance for large datasets ⚡
+* Supports time intelligence (YTD, MTD) ⏳
+
+ Functions:
+ SUM(), COUNT(), AVERAGE() – Aggregations
+ CALCULATE()               – Modify filter context
+ FILTER(), ALL()           – Data filtering
+ TIME INTELLIGENCE         – YTD, MTD
+
+
+6) Can you explain the difference between calculated columns and
+measures in Power BI?
+
+Calculated Column :
+Storage	              --> Stored in the data model (increases file size)
+Calculation Context   --> Row-by-row calculation	
+Performance           --> Slower for large datasets	
+Usage	              --> Used in slicers, filters, relationships	
+Example               --> Total Price = Sales[Quantity] * Sales[Unit Price]
+
+Measure :
+Storage	              --> Computed dynamically (no extra storage)                         	
+Calculation Context   --> Aggregates based on filter	
+Performance           --> Faster & efficient	
+Usage	              --> Used in visuals, tables, KPIs	
+Example               --> Total Sales = SUM(Sales[Total Price])
+
+7) How do you handle relationships between tables in Power BI? 
+
+Relationships in Power BI
+* Create in Model View (Auto or Manual).
+*Types:
+       One-to-Many (1:*), 
+       Many-to-Many (:), 
+       One-to-One (1:1).
+* Settings: Cardinality, Cross-Filter (Single/Both), Active/Inactive.
+* DAX: RELATED(), LOOKUPVALUE(), RELATEDTABLE().
+
+8) What is the purpose of a Power BI Gateway? 
+
+> Connects Power BI to on-premises data securely.
+> Enables data refresh & real-time access.
+> Supports Direct Query & Live Connection.
+> Types:
+        1) Personal (single user) 
+        2) Standard (multi-user)
+
+ 9) How can you schedule data refresh in Power BI Service? 
+
+>  Go to Power BI Service → Dataset → Settings.
+> Enable Scheduled Refresh and set frequency.
+>  Configure Gateway for on-premises data.
+>  Click Apply to save settings.
+ Limits: 8/day (Pro), 48/day (Premium).
+ Ensures automatic data updates.
+
+10) Explain the concept of row-level security in Power BI. 
+
+> Restricts data access based on user roles.
+> Uses DAX filters in Manage Roles (Desktop).
+> Assign roles in Power BI Service.
+> Types:
+      Static RLS – Fixed filters.
+      Dynamic RLS – Uses USERPRINCIPALNAME()
+
+11) What is the Power BI Desktop and how does it differ from Power
+BI Service? 
+
+🔹 Desktop → Create reports.
+Use	  -     Build reports & models	
+Storage   -	Local (PBIX files)	
+Data	  -      Import, Direct Query, Live	    
+Modeling  -	Full DAX & relationships	
+Refresh	  -      Manual	                      
+
+🔹 Service → Publish & share.
+Use	   -	Share & collaborate
+Storage	   -	Cloud-based
+Data	   -	Uses published datasets
+Modeling   -	Limited
+Refresh	   -    Scheduled
+
+
+12) Explain the concept of Direct Query in Power BI.
+
+> Connects directly to the data source without importing data.
+> Queries run in real-time when interacting with reports.
+> Best for large datasets & real-time analysis (e.g., SQL, Azure).
+> Limited DAX & transformations compared to Import Mode.
+> Performance depends on source query speed.
+
+13) What are Power BI templates and how are they useful? 
+> Pre-built reports (includes visuals, queries, DAX, model).
+> No data included, only structure & settings.
+> Reusable for different datasets.
+> Standardizes reports across teams.
+
+14) How do you handle incremental data refresh in Power BI?
+
+> Refreshes only new/changed data (not full dataset).
+> Configured in Model View → Table Properties.
+> Requires Date/Time column for partitioning.
+> Boosts performance & reduces load on sources.
+
+15) What is the role of Power Query in Power BI?
+
+> ETL tool – Extract, Transform, Load data.
+> Connects, cleans & reshapes data.
+> Uses M language for transformations.
+> Automates data preparation.
+
+
+16) Explain the difference between calculated columns and
+calculated tables in Power BI. 
+
+🔹 Columns → Row-level calculations.   
+Adds to	      Existing table	            
+Context  	Row-level	           
+Storage   	Increases model size	         
+Usage	     Filtering, relationships	                     
+Example	     Sales[Total] = Sales[Qty] * Sales[Price]
+
+
+🔹 Tables → Data segmentation & modeling
+Adds to	     	     New table
+Context             Table-level
+Storage   	    Stores a new table
+Usage	     	    Aggregations, modeling
+Example	    	    New table = FILTER(Sales, Sales[Region] = "US")
+
+
+17) How do you create custom visuals in Power BI?
+
+ From Marketplace – Import from AppSource.
+Using SDK – Develop with Power BI Visuals SDK (TypeScript, D3.js).
+ Steps:
+    Install Power BI SDK.
+    Run  pbiviz  new <visual-name>.
+    Code & package with  pbiviz  package.
+   Import into Power BI.
+
+18) What are the best practices for optimizing performance in
+Power BI? 
+1 Use Import Mode       –       Faster than Direct Query.
+2 Reduce Data Size      –       Remove unused columns/rows.
+3 Optimize DAX          –       Use measures over calculated columns.
+4 Use Aggregations      –       Pre-calculate summaries.
+5 Manage Relationships  –       Prefer 1: relationships*.
+6 Optimize Visuals       –      Limit complex visuals.
+7 Enable Query Reduction –     Minimize background queries.
+
+19) How can you integrate Power BI with other Microsoft
+products like Azure and Office 365? 
+> Azure – Connect with SQL, Synapse, Data Lake, ML, AD (SSO).
+> Excel – Import/export data, use Power Pivot.
+> SharePoint – Embed reports.
+> Teams & Power Automate – Share & automate insights.
+
+20) Explain the concept of aggregations in Power BI. 
+
+> Pre-summarized data for faster queries.
+> Reduces load & improves performance.
+> Works with Direct Query for optimization.
+>Types: Sum, Avg, Min, Max, Count.
+
+21) How do you handle error handling and data quality in Power
+BI?
+> Power Query – Remove errors, replace values, fix data types.
+> DAX – Use IFERROR(), ISBLANK(), IF(ISERROR(...)).
+> Data Validation – Remove duplicates, nulls, and inconsistencies.
+
+22) What is the purpose of Power BI Embedded and when would
+you use it? 
+    Purpose: Embed reports in apps/websites.
+    Use Cases:
+
+ISVs & developers need built-in analytics.
+Share reports with external users (no license needed).
+Customize user experience.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
